@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://chdmece358fbr"]
+
+[ext_resource type="FontFile" uid="uid://byetr7vjaac7l" path="res://pixel_font.ttf" id="1_yfm7w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqg86"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fxyes"]
+bg_color = Color(0.886275, 0, 0.133333, 1)
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 424.0
+offset_top = 150.0
+offset_right = 624.0
+offset_bottom = 300.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yqg86")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 440.0
+offset_top = 112.0
+offset_right = 620.0
+offset_bottom = 157.0
+theme_override_fonts/font = ExtResource("1_yfm7w")
+text = "NEXT PIECE:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 440.0
+offset_top = 312.0
+offset_right = 620.0
+offset_bottom = 357.0
+theme_override_fonts/font = ExtResource("1_yfm7w")
+text = "Score: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameOverLabel" type="Label" parent="."]
+offset_left = 104.0
+offset_top = 288.0
+offset_right = 284.0
+offset_bottom = 333.0
+theme_override_fonts/font = ExtResource("1_yfm7w")
+text = "GAME OVER
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 440.0
+offset_top = 496.0
+offset_right = 620.0
+offset_bottom = 536.0
+theme_override_fonts/font = ExtResource("1_yfm7w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fxyes")
+text = "New Game"
